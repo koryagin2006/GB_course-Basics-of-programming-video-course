@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+  
+  var eurrub = 70.17;
+  var usdrub = 63.85;
+
+  // Преобразуем из строкового типа в числовой;
+    eurrub = parseInt(eurrub);
+    usdrub = parseInt(usdrub);
+
+    var countRUB = prompt("Введите количество рублей: ");
+    countRUB = parseInt(countRUB);
+
+    var rubToEUR = countRUB / eurrub;
+    var rubToUSD = countRUB / usdrub;
+    var rubToAED = rubToUSD * 3.6725
+
+    alert(
+        countRUB + " рублей, это \n" + rubToEUR.toFixed(2) + " евро и \n"
+         + rubToUSD.toFixed(2) + " долларов и \n "
+         + rubToAED + " дирхамов");
+
+</script>

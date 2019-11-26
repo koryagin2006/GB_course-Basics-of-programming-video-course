@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	// 5! = 1*2*3*4*5 4!*5  
+	// 4! = 1*2*3*4
+	//.....
+
+	function recursiveFactorial(n){
+		if (n == 0){
+			return 1;
+		} else {
+			return recursiveFactorial(n-1)*n;
+		}
+	}
+
+
+	var rf = recursiveFactorial(4)
+
+</script>

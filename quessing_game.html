@@ -1,0 +1,35 @@
+Разработаем игру "Угадайка"
+Условие: ПК загадывает число от 0 до 100, пользователь должен угадать число за ограниченное число попыток (например  7). <br>
+Также ПК будет давать подсказки пользователю, если тот ввел слишком большое или слишком малельнькое число. <br>
+<br>
+
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer = parseInt(Math.random()*100);
+  	//document.write(answer);
+  	var userAnswer = +prompt("Угадайте число от 0 до 100: ");
+  	var maxTryCount = 2;
+
+  	for (var tryCount=1; tryCount < maxTryCount; tryCount++){
+	  	if(userAnswer == answer){
+	  		alert("Win!");
+	  		break;
+	  		//continue; - сразу переходим к следующей итераци цикла
+	  	} else if(userAnswer > answer){
+	  		alert("Вы ввели слишком большое число");
+	  	} else if(userAnswer < answer){
+	  		alert("Вы ввели слишком малельнькое число");
+	  	}
+
+
+	  	userAnswer = +prompt("Попробуйте еще раз\n"+"У вас осталось "+(maxTryCount - tryCount) + " попыток");
+  	}
+
+  	if(tryCount == maxTryCount)
+  		alert("Вы проиграли!");
+  		// NB! если после if или else идет всего одна команда, то {} можно не использовать
+  	alert("Правильный ответ "+ answer);
+
+
+</script>
